@@ -16,3 +16,4 @@ with open('D:/InnovionRay_team/Innovisionray_team/InnoVisionRay/Amit/AI_Diploma/
         course_price = course.a.text.split()
         
         print(course_name)
+        print(course_price)
