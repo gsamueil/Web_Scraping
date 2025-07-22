@@ -4,10 +4,15 @@ with open('D:/InnovionRay_team/Innovisionray_team/InnoVisionRay/Amit/AI_Diploma/
     content = html_file.read()
     soup =BeautifulSoup(content,'lxml')
     # print(soup.prettify())
-    tags =  soup.find_all('h5')
+    # tags =  soup.find_all('h5')
     # print(tags)
     
-    for course in tags:
-        print(course.text)
+    # for course in tags:
+    #     print(course.text)
         
-    
+    course_cards = soup.find_all('div', class_='card')
+    for course in course_cards:
+        course_name = course.h5.text
+        course_price = course.a.text.split()
+        
+        print(course_name)
